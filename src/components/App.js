@@ -8,13 +8,14 @@ const AppWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  padding: 20px;
   box-sizing: border-box;
 `
 
 const MainForm = styled.div`
   width: 400px;
   text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
 `
 
 const StyledTextField = styled(TextField)`
@@ -101,7 +102,6 @@ const App = ()=>{
 
         let reg = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[-#$^+=!*()@%&_?/.])");
         if(reg.test(text)){
-            console.log("hello");
             setValid(true);
         }else{
             setValid(false);
@@ -156,12 +156,12 @@ const App = ()=>{
                 </PasswordDescription>
                 <PasswordAlert>
                     <IconContain>
-                        <AiOutlineInfoCircle style = {{width:"25px", height: "25px"}}/>
+                        <AiOutlineInfoCircle style = {{width:"25", height: "25"}}/>
                     </IconContain>
                     Введенный пароль будет являться паролем для выпущенной ЭЦП.<br/>
                     Запомните введенные данные!
                 </PasswordAlert>
-                <StyledButton form="passwordForm" type="button" variant="contained" disabled={firstpas === "" || secpas === "" || isValid === false || isSame === false}>Подтвердить</StyledButton>
+                <StyledButton form="passwordForm" type="button" variant="contained" disabled={firstpas === "" || secpas === "" || !isValid || !isSame}>Подтвердить</StyledButton>
             </div>
             </MainForm>
         </AppWrapper>
