@@ -25,6 +25,10 @@ const StyledSubHeader = styled.div`
       margin-right: 0px;
     }
   
+    & ul li:hover{
+      color: #9D2550;
+    }
+  
     &&& ul > li > svg{
       margin-bottom: 10px;
     }
