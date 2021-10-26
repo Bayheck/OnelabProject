@@ -3,8 +3,11 @@ import Select from "@mui/material/Select";
 import selectTag from "../../../assets/SelectTag.svg";
 
 const StyledSelect = styled(Select)`
-  margin: 0 38px 0 34px;
- 
+  &&{
+    margin: 0 30px 0 20px;
+    font-size: 14px;  
+  }
+  
   input{
     top: 10px;  
   }

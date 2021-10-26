@@ -27,6 +27,9 @@ const StyledSubHeader = styled.div`
   
     & ul li:hover{
       color: #9D2550;
+      & path{
+        fill: #9D2550;
+      }
     }
   
     &&& ul > li > svg{

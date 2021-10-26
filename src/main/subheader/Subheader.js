@@ -13,7 +13,7 @@ const Subheader = () =>{
             <ul>
                 <li>
                     <CardIcon/>
-                    <div>карты</div>
+                    <div>Карты</div>
                 </li>
                 <li>
                     <MoneyIcon/>
