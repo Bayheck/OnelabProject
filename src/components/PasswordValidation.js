@@ -85,7 +85,7 @@ const IconContain = styled.div`
 `
 
 
-const App = ()=>{
+const PasswordValidation = ()=>{
     const [firstpas,setFirstpas] = useState("");
     const [secpas,setSecpas] = useState("");
     const [isValid, setValid] = useState(true);
@@ -168,4 +168,4 @@ const App = ()=>{
     )
 }
 
-export default App;
+export default PasswordValidation;
