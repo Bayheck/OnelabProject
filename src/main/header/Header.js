@@ -1,34 +1,17 @@
-import styled from 'styled-components';
-import Select from './Select';
 import Location from './Location';
 import Horizontal from './Horizontal';
 import CallNumber from './CallNumber';
 import Login from './Login';
+import StyledHeader from "../styled/styledHeader/StyledHeader";
 import { ReactComponent as MyLogoIcon } from '../../assets/Logo.svg';
-
-const StyledHeader = styled.div`
-  background-color: #F8F8F8;
-  .content{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    max-width: 1224px;
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;  
-  }
-  
-  MyLogoIcon{
-    margin-right: 34px;
-  }
-`
+import SelectLang from "./SelectLang";
 
 const Header = () =>{
     return(
         <StyledHeader>
             <div className="content">
                 <MyLogoIcon/>
-                <Select></Select>
+                <SelectLang></SelectLang>
                 <Location/>
                 <Horizontal/>
                 <CallNumber/>

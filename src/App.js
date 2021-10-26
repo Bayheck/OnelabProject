@@ -9,6 +9,7 @@ const StyledApp = styled.div`
   display: flex;
   justify-content: center;
   color: #1E2A41;
+  overflow-x: hidden; 
   
   & div{
     justify-content: center;
