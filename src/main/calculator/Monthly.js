@@ -1,7 +1,7 @@
 import StyledMonthly from "../styled/styledCalculator/StyledMonthly";
 
-const Monthly = ({money, time}) =>{
-    const percent = 1.17;
+const Monthly = ({money, time, isClient}) =>{
+    const percent = isClient ? 1.17 : 1.25;
     const monthlyPayment = Math.ceil(money*percent/time);
 
     return(

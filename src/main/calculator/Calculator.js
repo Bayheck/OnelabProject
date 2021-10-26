@@ -8,6 +8,7 @@ import Button from "../../shared/Button";
 const Calculator = () =>{
     const [loan, setLoan] = useState(7000000);
     const [time, setTime] = useState(8);
+    const [isClient, setIsClient] = useState(false);
 
     const year = Math.floor(time / 12);
     let timeYear;
@@ -66,7 +67,9 @@ const Calculator = () =>{
                    </div>
 
                    <div className="incomeForte">
-                       <StyledSwitch/>
+                       <StyledSwitch
+                            onChange={() =>{setIsClient(!isClient)}}
+                       />
                        <div>Я получаю запрплату по карте ForteBank</div>
                    </div>
                    <span className="additionalInfo">Для точного расчета необходимо оставить заявку</span>
@@ -77,10 +80,10 @@ const Calculator = () =>{
                     <div className="innerCreditDisplay">
                         <div className="textForCredit">Ежемесячный платеж</div>
                         <div>
-                            <Monthly time={time} money={loan}/>
+                            <Monthly time={time} money={loan} isClient={isClient}/>
                         </div>
                         <div className="textForCredit">Ставка вознаграждения</div>
-                        <div className="creditPercents">17%</div>
+                        <div className="creditPercents">{isClient? '17%': '25%'}</div>
                         <Button>Оформить кредит</Button>
                     </div>
                 </div>
