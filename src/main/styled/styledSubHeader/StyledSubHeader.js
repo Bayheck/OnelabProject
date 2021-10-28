@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledSubHeader = styled.div`
     &{
       max-width: 1224px;
@@ -19,6 +18,7 @@ const StyledSubHeader = styled.div`
       display: inline-block;
       margin-right: 56px;
       text-align: center;
+      cursor: pointer;
     }
 
     & ul li:last-child {

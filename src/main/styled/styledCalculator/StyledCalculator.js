@@ -38,7 +38,7 @@ const StyledCalculator = styled.div`
     background-color: rgba(242, 242, 242, 1);
     padding: 32px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     position: relative;
     border-radius: 4px;
     margin-top: 24px;

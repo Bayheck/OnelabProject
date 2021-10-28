@@ -4,6 +4,10 @@ import Subheader from './main/subheader/Subheader';
 import SliderSlick from './main/slickslider/SliderSlick';
 import Cards from './main/cards/Cards';
 import Calculator from "./main/calculator/Calculator";
+import TransferInfo from "./main/transferinfo/TransferInfo";
+import MobileAd from "./main/mobilead/MobileAd";
+import Converter from "./main/converter/Converter";
+import Footer from "./main/footer/Footer";
 
 const App = () =>{
     return(
@@ -14,6 +18,10 @@ const App = () =>{
                 <SliderSlick></SliderSlick>
                 <Cards></Cards>
                 <Calculator></Calculator>
+                <TransferInfo></TransferInfo>
+                <MobileAd></MobileAd>
+                <Converter></Converter>
+                <Footer></Footer>
             </div>
         </StyledApp>
     )
