@@ -67,6 +67,13 @@ const StyledForm = styled.form`
       }
     }
   }
+
+  @media screen and (max-width: 415px) {
+    &{
+      margin-top: 24px;
+    }
+  
+  }
 `
 
 export default StyledForm;

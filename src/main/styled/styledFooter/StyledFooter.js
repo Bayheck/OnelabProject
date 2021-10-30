@@ -13,11 +13,13 @@ const StyledFooter = styled.div`
       max-width: 1224px;
       margin: 0 auto;
       padding: 32px;
+      box-sizing: border-box;
     }
     
     & .infoBlocks{
       display: flex;
       justify-content: left;
+      flex-wrap: wrap;
     }
 
     ul{
@@ -105,7 +107,6 @@ const StyledFooter = styled.div`
       font-family: Rubik;
       font-size: 16px;
       font-weight: 700;
-      line-height: 140%;
       background: #303030;
       border-radius: 4px;
       border: none;
@@ -116,7 +117,34 @@ const StyledFooter = styled.div`
     img{
       position: absolute;
       right: 32px;
-      top: 20px;
+      top: 19px;
+    }
+
+    @media screen and (max-width: 415px) {
+      & .main{
+        max-width: 360px;
+      }
+      
+      & .infoLinkList{
+        display: none;
+      }
+      
+      & .main{
+        padding: 0;
+      }
+
+      & .MuiPaper-root{
+        display: block;
+      }
+      
+      & .contacts{
+        display: block;
+        text-align: center;
+      }
+      
+      & .visionContainer{
+        margin: 0;
+      }
     }
 `
 

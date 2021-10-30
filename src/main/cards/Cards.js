@@ -21,30 +21,26 @@ const Cards = () =>{
                         <Button className="button">Заказать карту</Button>
                     </div>
                 </div>
-                <div>
-                    <div className="single-card">
-                        <img src={gold} alt="gold card" />
-                        <div className="info">
-                            <h4>Gold</h4>
-                            <div className="text">Выпуск карты бесплатно</div>
-                            <div className="text">Снятие до 500 000 ₸ в месяц<br/>
-                                в банкоматах Казахстана бесплатно</div>
-                            <div className="text">CashBack до 15%</div>
-                            <Button className="button">Заказать карту</Button>
-                        </div>
+                <div className="single-card gold">
+                    <img src={gold} alt="gold card" />
+                    <div className="info">
+                        <h4>Gold</h4>
+                        <div className="text">Выпуск карты бесплатно</div>
+                        <div className="text">Снятие до 500 000 ₸ в месяц<br/>
+                            в банкоматах Казахстана бесплатно</div>
+                        <div className="text">CashBack до 15%</div>
+                        <Button className="button">Заказать карту</Button>
                     </div>
                 </div>
-                <div>
-                    <div className="single-card">
-                        <img src={platinum} alt="platinum card"/>
-                        <div className="info">
-                            <h4>Platinum</h4>
-                            <div className="text">Выпуск карты бесплатно</div>
-                            <div className="text">Снятие до 3 000 000 ₸ в месяц<br/>
-                                в банкоматах Казахстана бесплатно</div>
-                            <div className="text">CashBack до 15%</div>
-                            <Button className="button">Заказать карту</Button>
-                        </div>
+                <div className="single-card platinum">
+                    <img src={platinum} alt="platinum card"/>
+                    <div className="info">
+                        <h4>Platinum</h4>
+                        <div className="text">Выпуск карты бесплатно</div>
+                        <div className="text">Снятие до 3 000 000 ₸ в месяц<br/>
+                            в банкоматах Казахстана бесплатно</div>
+                        <div className="text">CashBack до 15%</div>
+                        <Button className="button">Заказать карту</Button>
                     </div>
                 </div>
             </div>

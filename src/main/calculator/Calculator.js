@@ -32,7 +32,7 @@ const Calculator = () =>{
                 <span>Предварительный расчет не является публичной офертой</span>
             </div>
             <div className="content">
-               <div>
+               <div className="sliderMenu">
                    <div className="creditDetails">Сколько вам нужно?</div>
                    <div className="slider">
                        <StyledSlider
@@ -43,7 +43,7 @@ const Calculator = () =>{
                            value={loan}
                            onChange={(event, val) => setLoan(val)}
                        />
-                       {new Intl.NumberFormat('ru-RU').format(loan)}
+                       <div className="sliderValue">{new Intl.NumberFormat('ru-RU').format(loan)}</div>
                    </div>
                    <div className="loanLimits">
                        <div>10 000 ₸</div>
@@ -59,7 +59,7 @@ const Calculator = () =>{
                            value={time}
                            onChange={(event, val) => setTime(val)}
                        />
-                       {`${YearOfLoan} ${MonthOfLoan}`}
+                       <div className="sliderValue">{`${YearOfLoan} ${MonthOfLoan}`}</div>
                    </div>
                    <div className="loanLimits">
                        <div>6 месяцев</div>

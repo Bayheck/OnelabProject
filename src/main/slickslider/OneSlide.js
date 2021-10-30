@@ -19,7 +19,7 @@ const OneSlide = () =>{
                 </button>
             </div>
             <div className="imgBlock">
-                <img src={buy} alt="shopping"  width="454px" height="397px"/>
+                <img src={buy} alt="shopping"/>
             </div>
         </StyledOneSlide>
     )

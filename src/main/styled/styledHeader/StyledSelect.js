@@ -24,6 +24,13 @@ const StyledSelect = styled(Select)`
     top: 25px;
     background-image: url(${selectTag});
   }
+
+  @media screen and (max-width: 415px) {
+    && {
+      display: none;
+    }
+
+  }
 `
 
 export default StyledSelect;

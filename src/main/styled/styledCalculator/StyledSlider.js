@@ -39,6 +39,13 @@ const StyledSlider = styled(Slider)`
     & .Mui-active::after{
       background-color: green;
     }
+
+  @media screen and (max-width: 415px) {
+    &&{
+      max-width: 280px;
+      width: 100%;
+    }
+  }
 `
 
 export default StyledSlider;

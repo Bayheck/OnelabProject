@@ -48,6 +48,25 @@ const StyledMobileAd = styled.div`
       left: 740px;
       top: -104px;
     }
+
+    @media screen and (max-width: 415px) {
+      &{
+        margin: 0 32px;
+        width: 100%;
+        max-width: 328px;
+        height: 664px;
+      }
+      
+      & .iphone{
+        width: 176px;
+        left: 76px;
+        top: 345px;
+      }
+      
+      & .content{
+        padding: 24px;
+      }
+    }
 `
 
 export default StyledMobileAd;

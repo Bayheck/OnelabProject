@@ -13,13 +13,14 @@ const TransferInfo = () =>{
                         <h5>Перевод с карты на любую карту мира</h5>
                         <button className="button">Подробнее</button>
                         <img className="worldImg" src={world} alt="world"/>
+                        <button className="onMobileButton">Подробнее</button>
                     </div>
                 </div>
                 <div className="block">
                     <div className="content">
                         <h5>Оплата платежей online</h5>
                         <span>Оплата штрафов, коммунальных услуг, услуг сотовых операторов и многое другое</span>
-                        <Button>Произвести платеж</Button>
+                        <Button className="buyButton">Произвести платеж</Button>
                         <img className="phoneImg" src={phone} alt="phone"/>
                     </div>
                 </div>

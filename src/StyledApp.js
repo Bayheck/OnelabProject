@@ -5,6 +5,7 @@ const StyledApp = styled.div`
   justify-content: center;
   color: #1E2A41;
   overflow-x: hidden; 
+  overflow-y: hidden;
   
   & div{
     justify-content: center;

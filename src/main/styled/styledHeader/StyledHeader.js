@@ -7,9 +7,22 @@ const StyledHeader = styled.div`
     justify-content: left;
     align-items: center;
     max-width: 1224px;
-    width: 100%;
+    flex-basis: 100%;
     height: 50px;
     margin: 0 auto;  
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 415px) {
+    & {
+      
+    }
+    
+    & .content{
+      width: 360px;
+      padding: 10px 16px;
+      margin: 0;
+    }
   }
 `
 

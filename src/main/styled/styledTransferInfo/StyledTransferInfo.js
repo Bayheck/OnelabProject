@@ -9,6 +9,7 @@ const StyledTransferInfo = styled.div`
   
   & .twoBlocks{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   
@@ -69,6 +70,7 @@ const StyledTransferInfo = styled.div`
   
   .threeBlocks{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 64px;
   }
@@ -89,6 +91,60 @@ const StyledTransferInfo = styled.div`
     line-height: 27px;
     margin: 22px 0 16px 0;
   }
+  
+  & .onMobileButton{
+    display: none;
+    background: #1E2A41;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 14px 32px 14px 32px;
+    border: none;
+  }
+
+  @media screen and (max-width: 415px) {
+      margin: 0 32px;
+      width: 100%;
+      max-width: 328px;
+    
+    & .phoneImg, .worldImg{
+      position: static;
+      display: block;
+    }
+    
+    & .worldImg{
+      margin: 24px auto;
+    }
+    
+    & .phoneImg{
+      margin: 32px auto 0 auto;
+    }
+    
+    & .onMobileButton{
+      display: block;
+    }
+    
+    & .button{
+      display: none;
+    }
+    
+    & .block{
+      margin-bottom: 24px;
+      padding: 32px 32px 0 32px;
+    }
+    
+    & .threeBlocks{
+      margin-top: 16px;
+    }
+    
+    & .questionBlock{
+      margin-bottom: 24px;
+    }
+  }
+  
 `
 
 export default StyledTransferInfo;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import back1 from "../../../assets/SlickSlider/Back1.png";
+import back2 from "../../../assets/MobileVersion/Mobileversionback.png";
 import leftArray from "../../../assets/SlickSlider/left_button_arrow.svg";
 import rightArray from "../../../assets/SlickSlider/right_button_arrow.svg";
 import dot from "../../../assets/SlickSlider/dots.svg";
@@ -18,7 +19,6 @@ const StyledSlick = styled.div`
   .slick-slider{
     max-width: 1224px;
     width: 100%;
-    height: 400px;
     position: relative;
   }
   
@@ -58,10 +58,6 @@ const StyledSlick = styled.div`
     display: inline-block;
   }
   
-  .slick-list{
-    height: 400px;
-  }
-  
   .slick-dots{
     bottom: 32px;
     text-align: left;
@@ -83,6 +79,30 @@ const StyledSlick = styled.div`
   .slick-dots li button:before{
     content: url(${inactive});
     opacity: 1;
+  }
+
+  @media screen and (max-width: 415px) {
+    & {
+      max-width: 380px;
+      width: 100%;
+      background-size:contain;
+      background-image: url(${back2});
+      background-repeat: no-repeat;
+    }
+    .slick-slider{
+      max-width: 380px;
+      width: 100%;
+    }
+    
+    .slick-list{
+      padding: 32px 26px 16px 16px;
+      box-sizing: content-box;
+    }
+    
+    .slick-dots{
+      text-align: center;
+      bottom: 110px;
+    }
   }
 `
 

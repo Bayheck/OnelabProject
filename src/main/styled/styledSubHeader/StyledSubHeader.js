@@ -35,6 +35,12 @@ const StyledSubHeader = styled.div`
     &&& ul > li > svg{
       margin-bottom: 10px;
     }
+
+  @media screen and (max-width: 415px) {
+    & {
+      display: none;
+    }
+  }
 `
 
 export default StyledSubHeader;

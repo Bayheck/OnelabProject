@@ -79,7 +79,7 @@ const Converter = () =>{
                 </div>
                 <div className="currencyCalculate">
                     <div className = "convert">
-                        <button className="convertButton" onClick={()=>convert()}>Convert</button>
+                        <button className="convertButton" onClick={()=>convert()}></button>
                     </div>
                     <h5>Конвертация валюты</h5>
                     <div className="input upper-input">

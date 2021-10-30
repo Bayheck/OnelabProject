@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCallNumber = styled.div`
-  margin-left: 144px;
+  margin-left: 100px;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -10,6 +10,13 @@ const StyledCallNumber = styled.div`
   
   & span{
     margin-left: 3px;
+  }
+
+  @media screen and (max-width: 415px) {
+    && {
+      display: none;
+    }
+
   }
 `
 

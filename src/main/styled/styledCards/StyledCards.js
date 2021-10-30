@@ -9,9 +9,12 @@ const StyledCards = styled.div`
     overflow: hidden;
     position: relative;
   }
+  
   .cards{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
   
   h3{
@@ -57,6 +60,21 @@ const StyledCards = styled.div`
   
   li{
     display: flex;
+  }
+
+  @media screen and (max-width: 415px) {
+    && {
+      margin-top: 0;
+    }
+    
+    & .cards{
+      justify-content: center;
+    }
+    
+    .gold, .platinum{
+      display: none;
+    }
+    
   }
 `
 

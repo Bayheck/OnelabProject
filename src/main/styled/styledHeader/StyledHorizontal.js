@@ -24,5 +24,12 @@ const StyledHorizontal = styled.ul`
       border-bottom: 2px solid #9D2550;
       box-sizing: border-box;
     }
+
+  @media screen and (max-width: 415px) {
+    && {
+      display: none;
+    }
+
+  }
 `
 export default StyledHorizontal;

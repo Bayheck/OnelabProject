@@ -6,6 +6,7 @@ const StyledOneSlide = styled.div`
     justify-content: space-between;
     color:#FFFFFF;
     padding: 0 1px 0 1px;
+    box-sizing: border-box;
   }
 
   .bankName{
@@ -47,6 +48,47 @@ const StyledOneSlide = styled.div`
   .imgBlock{
     margin-right: 32px;
   }
+
+  @media screen and (max-width: 415px) {
+    &&{
+      justify-content: left;
+    }
+    
+    img{
+      width: 138px;
+    }
+    
+    .bankName{
+      display: none;
+    }
+    
+    .prize{
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .catch{
+      font-size: 16px;
+      width: 150px;
+    }
+    
+    .detailsButton{
+      background: #9D2550;
+      color: #FFFFFF;
+      padding: 15px 34px;
+      line-height: 16px;
+      margin-top: 70px;
+    }
+    
+    .imgBlock{
+      display: flex;
+      margin-right: 40px;
+      align-items: center;
+    }
+  }
 `
 
 export default StyledOneSlide;
+
+
+

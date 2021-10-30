@@ -4,6 +4,7 @@ import euro from "../../../assets/Converter/euro.svg";
 import pound from "../../../assets/Converter/pound.svg";
 import rub from "../../../assets/Converter/rub.svg";
 import tenge from "../../../assets/Converter/tenge.svg";
+import arrows from "../../../assets/MobileVersion/arrows.svg";
 
 const StyledConverter = styled.div`
   &{
@@ -73,6 +74,7 @@ const StyledConverter = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin: 24px 0 66px 0;
+    flex-wrap: wrap;
   }
   
   & .currencyCalculate{
@@ -160,8 +162,8 @@ const StyledConverter = styled.div`
     margin-right: 20px;
   }
   
-  button:hover{
-    background-color: black;
+  button:active{
+    opacity: 8;
   }
   
   & .dollar{
@@ -201,6 +203,83 @@ const StyledConverter = styled.div`
   
   & .chosen{
     background-color: black;
+  }
+
+  @media screen and (max-width: 415px) {
+    &{
+      margin: 150px auto 0 auto;
+      width: 100%;
+      max-width: 328px;
+    }
+    
+    & .buy{
+      margin-left: 58px;
+      margin-right: 40px;
+    }
+    
+    & .heading{
+      margin-left: 156px;
+    }
+    
+    & .horizontal{
+      padding: 16px 0 16px 20px;
+    }
+    
+    & .sell{
+      margin-left: 54px;
+    }
+    
+    h3{
+      font-size: 24px;
+    }
+    
+    h5{
+      font-size: 18px;
+    }
+    
+    & .currencyBlock{
+      margin-bottom: 10px;
+    }
+    
+    & .currencyCalculate{
+      margin-left: 20px;
+      padding: 24px 16px 26px 46px;
+      border-radius: 4px;
+      max-width: 305px;
+    }
+    
+    & .input{
+      display: block;
+      border: none;
+    }
+    
+    input{
+      font-size: 18px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(115, 115, 115, 1);
+    }
+
+    input:focus{
+      font-size: 18px;
+    }
+    
+    & .convert{
+      top: 0;
+      left: -24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+    }
+    
+    & .convertButton{
+      width: 34px;
+      height: 34px;
+      background: #1E2A41 url(${arrows}) 9px 9px no-repeat;
+      top: 7px;
+      left: 7px;
+    }
   }
 `
 

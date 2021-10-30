@@ -2,17 +2,27 @@ import styled from "styled-components";
 
 const StyledCalculator = styled.div`
   &{
-    max-width: 1224px;
+    max-width: 1288px;
     width: 100%;
     margin: 0 auto;
     padding: 0 32px 32px 32px;
+    box-sizing: border-box;
+  }
+  
+  & .sliderMenu{
+    max-width: 850px;
+    width: 100%;
   }
   
   & .slider{
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     font-size: 24px;
+  }
+  
+  & .sliderValue{
+    white-space: nowrap;
   }
   
   & .loanLimits{
@@ -39,6 +49,7 @@ const StyledCalculator = styled.div`
     padding: 32px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     border-radius: 4px;
     margin-top: 24px;
@@ -86,6 +97,22 @@ const StyledCalculator = styled.div`
   & .additionalInfo{
     font-size: 14px;
     color: #737373;
+  }
+
+  @media screen and (max-width: 415px) {
+    & .header h3{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    
+    & .sliderValue{
+      display: none;
+    }
+    
+    & .vertLine{
+      display: none;
+    }
   }
 `
 

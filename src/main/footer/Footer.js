@@ -4,12 +4,14 @@ import { ReactComponent as Facebook } from '../../assets/Footer/fb.svg';
 import { ReactComponent as Youtube } from '../../assets/Footer/youtube.svg';
 import { ReactComponent as Tiktok } from '../../assets/Footer/tiktok.svg';
 import eye from "../../assets/Footer/eye.svg";
+import AccordionFooter from "./AccordionFooter";
 
 const Footer = () =>{
     return(
         <StyledFooter>
             <div className="main">
                 <div className="infoBlocks">
+                    <AccordionFooter/>
                     <div className="infoLinkList bank">
                         <div className="about">Банк</div>
                         <ul>
