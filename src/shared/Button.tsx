@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from "react";
 
 const StyledButton = styled.button`
   background: #1E2A41;
@@ -12,9 +13,14 @@ const StyledButton = styled.button`
   border: none;
 `
 
-const Button = ({children})=>{
+export interface Props  {
+    children: React.ReactNode,
+    className?: string
+}
+
+const Button:React.FC<Props> = ({children,className})=>{
     return(
-        <StyledButton>{children}</StyledButton>
+        <StyledButton className={className}>{children}</StyledButton>
     )
 }
 

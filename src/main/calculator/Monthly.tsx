@@ -1,8 +1,15 @@
 import StyledMonthly from "../styled/styledCalculator/StyledMonthly";
+import React from "react";
 
-const Monthly = ({money, time, isClient}) =>{
-    const percent = isClient ? 1.17 : 1.25;
-    const monthlyPayment = Math.ceil(money*percent/time);
+export interface Props  {
+    money: number;
+    time: number;
+    isClient: boolean;
+}
+
+const Monthly:React.FC<Props> = ({money, time, isClient}) =>{
+    const percent:number = isClient ? 1.17 : 1.25;
+    const monthlyPayment:number = Math.ceil(money*percent/time);
 
     return(
         <StyledMonthly>

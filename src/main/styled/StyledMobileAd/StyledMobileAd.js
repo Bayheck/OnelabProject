@@ -51,10 +51,14 @@ const StyledMobileAd = styled.div`
 
     @media screen and (max-width: 415px) {
       &{
-        margin: 0 32px;
+        margin: 0 auto;
         width: 100%;
         max-width: 328px;
         height: 664px;
+      }
+      
+      & .downloadButtons{
+        margin: 24px auto 0 auto;
       }
       
       & .iphone{
@@ -64,7 +68,15 @@ const StyledMobileAd = styled.div`
       }
       
       & .content{
-        padding: 24px;
+        padding: 12px;
+      }
+      
+      h5{
+        margin: 12px;
+      }
+      
+      ul{
+        margin: 12px;
       }
     }
 `

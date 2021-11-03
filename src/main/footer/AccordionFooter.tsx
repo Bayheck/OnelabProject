@@ -1,29 +1,8 @@
-import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import styled from "styled-components";
 import { ReactComponent as AccordionArrow } from '../../assets/MobileVersion/Accordion.svg';
-
-const StyledAccordionFooter = styled(Accordion)`
-  &&{
-    box-shadow: none;
-    background: #F8F8F8;
-    width: 360px;
-    padding: 0;
-    display: none;
-  }
-  
-  & .MuiAccordionSummary-content{
-    justify-content: space-between;
-  }
-
-  @media screen and (max-width: 415px) {
-    &&{
-      display: block;
-    }
-  }
-`
+import StyledAccordionFooter from "../styled/styledFooter/StyledAccordionFooter";
 
 const AccordionFooter = ()=>{
     return(

@@ -95,7 +95,6 @@ const StyledFooter = styled.div`
     
     & .visionContainer{
       margin-left: auto;
-      width: 312px;
       position: relative;
     }
     
@@ -106,6 +105,7 @@ const StyledFooter = styled.div`
       text-align: left;
       font-family: Rubik;
       font-size: 16px;
+      line-height: 100%;
       font-weight: 700;
       background: #303030;
       border-radius: 4px;
@@ -123,6 +123,7 @@ const StyledFooter = styled.div`
     @media screen and (max-width: 415px) {
       & .main{
         max-width: 360px;
+        margin-bottom: 24px;
       }
       
       & .infoLinkList{
@@ -140,10 +141,25 @@ const StyledFooter = styled.div`
       & .contacts{
         display: block;
         text-align: center;
+        border: none;
+        margin: 0;
+      }
+      
+      & .socials{
+        margin: 26px auto 0 auto;
       }
       
       & .visionContainer{
         margin: 0;
+      }
+      
+      & .visionButton{
+        display: block;
+        margin: 44px auto 0 auto;
+      }
+      
+      img{
+        right: 56px;
       }
     }
 `

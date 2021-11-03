@@ -103,16 +103,21 @@ const StyledTransferInfo = styled.div`
     line-height: 100%;
     padding: 14px 32px 14px 32px;
     border: none;
+    margin: 26px auto 24px auto;
   }
 
   @media screen and (max-width: 415px) {
-      margin: 0 32px;
+      margin: 24px auto 0 auto;
       width: 100%;
       max-width: 328px;
     
     & .phoneImg, .worldImg{
       position: static;
       display: block;
+    }
+    
+    & .content{
+      margin: 0 auto;
     }
     
     & .worldImg{
@@ -142,6 +147,11 @@ const StyledTransferInfo = styled.div`
     
     & .questionBlock{
       margin-bottom: 24px;
+    }
+    
+    & .buyButton{
+      margin: 24px auto 0 auto;
+      display: block;
     }
   }
   

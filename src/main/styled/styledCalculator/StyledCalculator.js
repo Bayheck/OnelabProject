@@ -98,12 +98,45 @@ const StyledCalculator = styled.div`
     font-size: 14px;
     color: #737373;
   }
+  
+  & .mobileDisplay{
+    display: none;
+  }
+  
+  & .creditDisplayMobile{
+    display: none;
+  }
+  
+  & .buttonMobile{
+    display: none;
+  }
 
   @media screen and (max-width: 415px) {
+    &{
+      max-width: 328px;
+      padding: 0;
+    }
+    
     & .header h3{
       font-weight: 500;
       font-size: 24px;
       line-height: 120%;
+    }
+    
+    & .content{
+      padding: 24px;
+    }
+    
+    & .creditDetails{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    & .mobileDisplay{
+      display:block;
+      font-size: 18px;
+      color: black;
     }
     
     & .sliderValue{
@@ -112,6 +145,30 @@ const StyledCalculator = styled.div`
     
     & .vertLine{
       display: none;
+    }
+    
+    & .creditDisplay{
+      display: none;
+    }
+    
+    & .buttonMobile{
+      display: block;
+    }
+    
+    & .creditDisplayMobile{
+      display: block;
+      border-top: 1px solid rgba(224, 224, 224, 1);
+      padding-top: 24px;
+    }
+    
+    & .creditPercents{
+      font-size: 24px;
+      line-height: 120%;
+      margin: 10px 0;
+    }
+    
+    & .buttonMobile{
+      margin: 24px auto 0 auto;
     }
   }
 `

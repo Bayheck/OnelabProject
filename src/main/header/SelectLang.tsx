@@ -8,7 +8,7 @@ const SelectLang = () =>{
     return(
         <StyledSelect
             value={select}
-            onChange = {(e) => {setSelect(e.target.value)}}
+            onChange = {() => {return (e:React.FormEvent<HTMLInputElement>) => {setSelect(e.currentTarget.value)}}}
         >
             <MenuItem value={"kaz"}>Kaz</MenuItem>
             <MenuItem value={"eng"}>Eng</MenuItem>

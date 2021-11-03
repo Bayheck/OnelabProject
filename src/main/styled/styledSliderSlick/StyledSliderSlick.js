@@ -83,7 +83,7 @@ const StyledSlick = styled.div`
 
   @media screen and (max-width: 415px) {
     & {
-      max-width: 380px;
+      max-width: 450px;
       width: 100%;
       background-size:contain;
       background-image: url(${back2});

@@ -207,7 +207,7 @@ const StyledConverter = styled.div`
 
   @media screen and (max-width: 415px) {
     &{
-      margin: 150px auto 0 auto;
+      margin: 70px auto 0 auto;
       width: 100%;
       max-width: 328px;
     }
@@ -279,6 +279,10 @@ const StyledConverter = styled.div`
       background: #1E2A41 url(${arrows}) 9px 9px no-repeat;
       top: 7px;
       left: 7px;
+    }
+    
+    & .main{
+      margin-bottom: 40px;
     }
   }
 `
