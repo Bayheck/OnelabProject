@@ -41,54 +41,87 @@ const Converter = () =>{
         }
     }
 
-    let exchange;
+    let table;
     if(kzt !== undefined){
-        exchange = {
-            usdBuy: Math.round((1 / kzt["usd"] * 0.98)* 100) / 100,
-            usdSell: Math.round((1 / kzt["usd"])* 100) / 100,
-            eurBuy: Math.round((1 / kzt["eur"] * 0.98)* 100) / 100,
-            eurSell: Math.round((1 / kzt["eur"])* 100) / 100,
-            rubBuy: Math.round((1 / kzt["rub"] * 0.98)* 100) / 100,
-            rubSell: Math.round((1 / kzt["rub"])* 100) / 100,
-            gbpBuy: Math.round((1 / kzt["gbp"] * 0.98)* 100) / 100,
-            gbpSell: Math.round((1 / kzt["gbp"])* 100) / 100,
-        }
+        table= [
+            {
+                name: 'USD',
+                sign: '$',
+                lanCode: 'usd',
+                currency: kzt['usd'],
+            },
+            {
+                name: 'EUR',
+                sign: '€',
+                lanCode: 'eur',
+                currency: kzt['eur'],
+            },
+            {
+                name: 'RUB',
+                sign: '₽',
+                lanCode: 'rub',
+                currency: kzt['rub'],
+            },
+            {
+                name: 'GBP',
+                sign: '£',
+                lanCode: 'gbp',
+                currency: kzt['gbp'],
+            }
+        ]
     }
+
+    let buttons = [
+        {
+            name: 'usd',
+            className: 'dollar',
+            isChosenFrom: from === 'usd'?'chosen':'',
+            isChosenTo: to === 'usd'?'chosen':'',
+        },
+        {
+            name: 'eur',
+            className: 'euro',
+            isChosenFrom: from === 'eur'?'chosen':'',
+            isChosenTo: to === 'eur'?'chosen':'',
+        },
+        {
+            name: 'rub',
+            className: 'rub',
+            isChosenFrom: from === 'rub'?'chosen':'',
+            isChosenTo: to === 'rub'?'chosen':'',
+        },
+        {
+            name: 'gbp',
+            className: 'pound',
+            isChosenFrom: from === 'gbp'?'chosen':'',
+            isChosenTo: to === 'gbp'?'chosen':'',
+        },
+        {
+            name: 'kzt',
+            className: 'tenge',
+            isChosenFrom: from === 'kzt'?'chosen':'',
+            isChosenTo: to === 'kzt'?'chosen':'',
+        },
+    ]
 
     return(
         <StyledConverter>
             <h3>Курсы безналичной конвертации валют</h3>
-            <span>Курс актуален на {data !== undefined?data.date: ''}</span>
+            <span>Курс актуален на {data !== undefined && data.date}</span>
             <div className="main">
                 <div className="currencyBlock">
                     <div className="heading">
                         <div>Покупка</div>
                         <div className="sell">Продажа</div>
                     </div>
-                    <div className="horizontal">
-                        <div>$</div>
-                        <div className="current">USD</div>
-                        <div className="buy">{exchange !== undefined? exchange.usdBuy:''}</div>
-                        <div className="sellCur">{exchange !== undefined? exchange.usdSell:''}</div>
-                    </div>
-                    <div className="horizontal">
-                        <div>€</div>
-                        <div className="current">EUR</div>
-                        <div className="buy">{exchange !== undefined?exchange.eurBuy:''}</div>
-                        <div className="sellCur">{exchange !== undefined?exchange.eurSell:''}</div>
-                    </div>
-                    <div className="horizontal">
-                        <div>₽</div>
-                        <div className="current">RUB</div>
-                        <div className="buy">{exchange !== undefined?exchange.rubBuy:''}</div>
-                        <div className="sellCur">{exchange !== undefined?exchange.rubSell:''}</div>
-                    </div>
-                    <div className="horizontal">
-                        <div>£</div>
-                        <div className="current">GBP</div>
-                        <div className="buy">{exchange !== undefined?exchange.gbpBuy:''}</div>
-                        <div className="sellCur">{exchange !== undefined?exchange.gbpSell:''}</div>
-                    </div>
+                    {table !== undefined && table.map(({name,sign, currency}) =>(
+                        <div className="horizontal">
+                            <div>{sign}</div>
+                            <div className="current">{name}</div>
+                            <div className="buy">{Math.round((1 / currency * 0.98)* 100) / 100}</div>
+                            <div className="sellCur">{ Math.round((1 / currency)* 100) / 100}</div>
+                        </div>
+                    ))}
                 </div>
                 <div className="currencyCalculate">
                     <div className = "convert">
@@ -98,21 +131,17 @@ const Converter = () =>{
                     <div className="input upper-input">
                         <input type="number" placeholder="From" value={input} onChange={(e)=>setInput(e.currentTarget.value)} />
                         <div>
-                            <button onClick={() => setFrom("usd")} className={`dollar ${from === "usd"?"chosen":""}`}></button>
-                            <button onClick={() => setFrom("eur")} className={`euro ${from === "eur"?"chosen":""}`}></button>
-                            <button onClick={() => setFrom("rub")} className={`rub ${from === "rub"?"chosen":""}`}></button>
-                            <button onClick={() => setFrom("gbp")} className={`pound ${from === "gbp"?"chosen":""}`}></button>
-                            <button onClick={() => setFrom("kzt")} className={`tenge ${from === "kzt"?"chosen":""}`}></button>
+                            {buttons.map(({name,className,isChosenFrom}) =>(
+                                <button onClick={() => setFrom(name)} className={`${className} ${isChosenFrom}`}></button>
+                            ))}
                         </div>
                     </div>
                     <div className="input">
                         <input type="text" placeholder="To" value={converted} />
                         <div>
-                            <button onClick={() => setTo("usd")} className={`dollar ${to === "usd"?"chosen":""}`}></button>
-                            <button onClick={() => setTo("eur")} className={`euro ${to === "eur"?"chosen":""}`}></button>
-                            <button onClick={() => setTo("rub")} className={`rub ${to === "rub"?"chosen":""}`}></button>
-                            <button onClick={() => setTo("gbp")} className={`pound ${to === "gbp"?"chosen":""}`}></button>
-                            <button onClick={() => setTo("kzt")} className={`tenge ${to === "kzt"?"chosen":""}`}></button>
+                            {buttons.map(({name, className,isChosenTo}) =>(
+                                <button onClick={() => setTo(name)} className={`${className} ${isChosenTo}`}></button>
+                            ))}
                         </div>
                     </div>
                 </div>
