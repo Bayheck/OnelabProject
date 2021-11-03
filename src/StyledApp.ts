@@ -11,6 +11,10 @@ const StyledApp = styled.div`
     justify-content: center;
     font-family: 'Rubik', sans-serif;
   }
+  
+  & .allWrapper{
+    width: 100%;
+  }
 `
 
 export default StyledApp;

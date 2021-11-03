@@ -138,7 +138,7 @@ const StyledTransferInfo = styled.div`
     
     & .block{
       margin-bottom: 24px;
-      padding: 32px 32px 0 32px;
+      padding: 24px 24px 0 24px;
     }
     
     & .threeBlocks{
@@ -147,11 +147,20 @@ const StyledTransferInfo = styled.div`
     
     & .questionBlock{
       margin-bottom: 24px;
+      padding: 24px;
     }
     
     & .buyButton{
       margin: 24px auto 0 auto;
       display: block;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    max-width: 288px;
+    
+    & .content{
+      width: auto;
     }
   }
   

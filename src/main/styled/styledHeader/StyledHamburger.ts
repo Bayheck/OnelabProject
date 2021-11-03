@@ -18,6 +18,7 @@ const StyledHamburger = styled.div`
     @media screen and (max-width: 415px) {
       &{
         display: block;
+        margin-right: 26px;
       }
     }
 `

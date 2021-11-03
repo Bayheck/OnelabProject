@@ -127,16 +127,11 @@ const StyledCalculator = styled.div`
       padding: 24px;
     }
     
-    & .creditDetails{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    
     & .mobileDisplay{
       display:block;
       font-size: 18px;
       color: black;
+      margin-top: 10px;
     }
     
     & .sliderValue{
@@ -169,6 +164,21 @@ const StyledCalculator = styled.div`
     
     & .buttonMobile{
       margin: 24px auto 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    &{
+      padding: 0 16px 0 16px;
+    }
+
+    & .header h3{
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
+    
+    & .creditDetails{
+      display: block;
     }
   }
 `

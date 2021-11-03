@@ -12,7 +12,7 @@ import Footer from "./main/footer/Footer";
 const App = () =>{
     return(
         <StyledApp>
-            <div>
+            <div className="allWrapper">
                 <Header></Header>
                 <Subheader></Subheader>
                 <SliderSlick></SliderSlick>

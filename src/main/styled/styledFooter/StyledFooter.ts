@@ -13,7 +13,6 @@ const StyledFooter = styled.div`
       max-width: 1224px;
       margin: 0 auto;
       padding: 32px;
-      box-sizing: border-box;
     }
     
     & .infoBlocks{
@@ -160,6 +159,12 @@ const StyledFooter = styled.div`
       
       img{
         right: 56px;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      img{
+        right: 36px;
       }
     }
 `

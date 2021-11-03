@@ -21,9 +21,20 @@ const StyledAccordionFooter = styled(Accordion)`
     justify-content: space-between;
   }
 
+  & .MuiPaper-root{
+    width: 100px;
+  }
+
   @media screen and (max-width: 415px) {
     &&{
       display: block;
+      width: 365px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    &&{
+      width: 320px;
     }
   }
 `

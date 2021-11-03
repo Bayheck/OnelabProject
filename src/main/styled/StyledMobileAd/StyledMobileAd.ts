@@ -79,6 +79,20 @@ const StyledMobileAd = styled.div`
         margin: 12px;
       }
     }
+
+    @media screen and (max-width: 320px) {
+      &{
+        max-width: 288px;
+      }
+      
+      a img{
+        width: 75%;
+      }
+      
+      & .iphone{
+        left: 20%;
+      }
+    }
 `
 
 export default StyledMobileAd;

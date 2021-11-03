@@ -51,7 +51,7 @@ const StyledOneSlide = styled.div`
 
   @media screen and (max-width: 415px) {
     &&{
-      justify-content: left;
+      justify-content: space-between;
     }
     
     img{
@@ -82,8 +82,18 @@ const StyledOneSlide = styled.div`
     
     .imgBlock{
       display: flex;
-      margin-right: 40px;
+      margin-right: 24px;
       align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .prize{
+      font-size: 21px;
+    }
+    
+    .detailsButton{
+      margin-top: 42px;
     }
   }
 `

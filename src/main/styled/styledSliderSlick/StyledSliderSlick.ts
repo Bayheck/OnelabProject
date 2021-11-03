@@ -10,7 +10,6 @@ import inactive from "../../../assets/SlickSlider/inactive.svg";
 const StyledSlick = styled.div`
     &{
       background-image: url(${back1});
-      width: 1920px;
       height: 400px;
       display: flex;
       justify-content: center;
@@ -85,7 +84,8 @@ const StyledSlick = styled.div`
     & {
       max-width: 450px;
       width: 100%;
-      background-size:contain;
+      height: auto;
+      background-size:100%;
       background-image: url(${back2});
       background-repeat: no-repeat;
     }
@@ -95,14 +95,25 @@ const StyledSlick = styled.div`
     }
     
     .slick-list{
-      padding: 32px 26px 16px 16px;
+      padding: 32px 26px 52px 16px;
       box-sizing: content-box;
     }
     
     .slick-dots{
       text-align: center;
-      bottom: 110px;
+      bottom: 15px;
     }
+  }
+
+  @media screen and (max-width: 320px) {
+    & {
+      height: 265px;
+    }
+    
+    .slick-dots{
+      bottom: 10px;
+    }
+
   }
 `
 

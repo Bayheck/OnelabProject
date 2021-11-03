@@ -30,6 +30,7 @@ const StyledConverter = styled.div`
   
   & .heading{
     margin-left: 312px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: left;
     font-weight: normal;
@@ -231,6 +232,7 @@ const StyledConverter = styled.div`
     
     h3{
       font-size: 24px;
+      margin-bottom: 16px;
     }
     
     h5{
@@ -284,6 +286,34 @@ const StyledConverter = styled.div`
     & .main{
       margin-bottom: 40px;
     }
+  }
+
+  @media screen and (max-width: 320px) {
+    & {
+      max-width: 288px;
+    }
+    
+    & .buy{
+      margin-left: 36px;
+      margin-right: 0;
+    }
+    
+    & .heading{
+      margin-left: 130px;
+    }
+    
+    & .sell{
+      margin-left: 40px;
+    }
+    
+    input{
+      width: 210px;
+    }
+
+    & .currencyCalculate{
+      max-width: 266px;
+    }
+    
   }
 `
 

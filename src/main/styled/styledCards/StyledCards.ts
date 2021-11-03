@@ -64,7 +64,8 @@ const StyledCards = styled.div`
 
   @media screen and (max-width: 415px) {
     && {
-      margin-top: 0;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
     
     & .cards{
@@ -74,7 +75,23 @@ const StyledCards = styled.div`
     .gold, .platinum{
       display: none;
     }
+  }
+
+  @media screen and (max-width: 320px) {
+    &{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
     
+    img{
+      max-width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    & .info{
+      margin: 0 auto;
+    }
   }
 `
 
