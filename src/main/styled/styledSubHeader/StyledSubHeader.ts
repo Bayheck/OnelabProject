@@ -11,7 +11,7 @@ const StyledSubHeader = styled.div`
       padding: 0;
       font-size: 14px;
       line-height: 17px;
-      margin: 20px 0 20px 281px;
+      margin: 20px 0 20px 164px;
     }
   
     & ul li{

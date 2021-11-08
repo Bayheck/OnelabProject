@@ -5,7 +5,7 @@ import selectTag from "../../../assets/SelectTag.svg";
 const StyledSelect = styled(Select)`
   &&{
     margin: 0 30px 0 20px;
-    font-size: 14px;  
+    font-size: 14px;
   }
   
   input{

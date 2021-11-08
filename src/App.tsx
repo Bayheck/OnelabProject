@@ -1,13 +1,16 @@
 import StyledApp from "./StyledApp";
 import Header from './main/header/Header';
 import Subheader from './main/subheader/Subheader';
-import SliderSlick from './main/slickslider/SliderSlick';
-import Cards from './main/cards/Cards';
-import Calculator from "./main/calculator/Calculator";
-import TransferInfo from "./main/transferinfo/TransferInfo";
-import MobileAd from "./main/mobilead/MobileAd";
-import Converter from "./main/converter/Converter";
 import Footer from "./main/footer/Footer";
+import Banner from "./main/banner/Banner";
+import CreditConditions from "./main/creditConditions/CreditConditions";
+import AdvantagesExpressCredit from "./main/advantagesExpressCredit/AdvantagesExpressCredit";
+import ExpressCalculator from "./main/expressCalculator/ExpressCalculator";
+import InfoTabs from "./main/infoTabs/InfoTabs";
+import Stonks from "./main/stonks/Stonks";
+import DocumentsForCredit from "./main/documentsForCredit/DocumentsForCredit";
+import CitizenInfo from "./main/citizenInfo/CitizenInfo";
+import FrequentQuestions from "./main/frequentQuestions/FrequentQuestions";
 
 const App = () =>{
     return(
@@ -15,12 +18,15 @@ const App = () =>{
             <div className="allWrapper">
                 <Header></Header>
                 <Subheader></Subheader>
-                <SliderSlick></SliderSlick>
-                <Cards></Cards>
-                <Calculator></Calculator>
-                <TransferInfo></TransferInfo>
-                <MobileAd></MobileAd>
-                <Converter></Converter>
+                <Banner/>
+                <CreditConditions/>
+                <AdvantagesExpressCredit/>
+                <ExpressCalculator/>
+                <InfoTabs/>
+                <Stonks/>
+                <DocumentsForCredit/>
+                <CitizenInfo/>
+                <FrequentQuestions/>
                 <Footer></Footer>
             </div>
         </StyledApp>

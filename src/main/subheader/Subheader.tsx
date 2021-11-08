@@ -6,11 +6,16 @@ import { ReactComponent as HomeIcon } from '../../assets/Subheader/home.svg';
 import { ReactComponent as InsuranceIcon } from '../../assets/Subheader/insurance.svg';
 import { ReactComponent as LocationIcon } from '../../assets/Subheader/location.svg';
 import { ReactComponent as MoneyIcon } from '../../assets/Subheader/money.svg';
+import { ReactComponent as CreditIcon } from '../../assets/CreditDetails/credit.svg';
 
 const Subheader = () =>{
     return(
         <StyledSubHeader>
             <ul>
+                <li>
+                    <CreditIcon/>
+                    <div>Кредиты</div>
+                </li>
                 <li>
                     <CardIcon/>
                     <div>Карты</div>

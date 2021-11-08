@@ -9,30 +9,26 @@ const DEFAULT_LOAN = 7000000;
 const DEFAULT_TIME = 8;
 
 const Calculator = () =>{
-    const [loan, setLoan] = useState<number>(DEFAULT_LOAN);
-    const [time, setTime] = useState<number>(DEFAULT_TIME);
+    const [loan, setLoan] = useState<number|number[]>(DEFAULT_LOAN);
+    const [time, setTime] = useState<number|number[]>(DEFAULT_TIME);
     const [isClient, setIsClient] = useState<boolean>(false);
 
-    const year:number = Math.floor(time / 12);
+    let year:number;
+    let YearOfLoan:string = '';
+    let MonthOfLoan:string = '';
     let timeYear:string;
 
-    if(year === 1){
-        timeYear = ' год';
-    } else if(year > 1 && year < 5){
-        timeYear = ' года';
-    }else{
-        timeYear = ' лет';
-    }
-
-    const YearOfLoan:string = year === 0 ? '': `${year + timeYear}`;
-    const MonthOfLoan:string = time % 12 === 0 ? '': `${time % 12} месяцев`;
-
-    const handleLoanChange = (event: any, value:any):void =>{
-        setLoan(value);
-    }
-
-    const handleTimeChange = (event: any, value:any):void =>{
-        setTime(value);
+    if(typeof time === "number"){
+        year = Math.floor(time / 12);
+        if(year === 1){
+            timeYear = ' год';
+        } else if(year > 1 && year < 5){
+            timeYear = ' года';
+        }else{
+            timeYear = ' лет';
+        }
+        YearOfLoan = year === 0 ? '': `${year + timeYear}`;
+        MonthOfLoan = time % 12 === 0 ? '': `${time % 12} месяцев`;
     }
 
     return(
@@ -43,7 +39,7 @@ const Calculator = () =>{
             </div>
             <div className="content">
                <div className="sliderMenu">
-                   <div className="creditDetails">Сколько вам нужно? <span className={"mobileDisplay"}>{Intl.NumberFormat('ru-RU').format(loan)}₸</span></div>
+                   <div className="creditDetails">Сколько вам нужно? <span className={"mobileDisplay"}>{typeof loan === "number" && Intl.NumberFormat('ru-RU').format(loan)}₸</span></div>
                    <div className="slider">
                        <StyledSlider
                            aria-label="Loan"
@@ -51,9 +47,9 @@ const Calculator = () =>{
                            max={10000000}
                            step={10000}
                            value={loan}
-                           onChange={handleLoanChange}
+                           onChange={ (event, value) =>{setLoan(value)}}
                        />
-                       <div className="sliderValue">{Intl.NumberFormat('ru-RU').format(loan)}</div>
+                       <div className="sliderValue">{typeof loan === "number" && Intl.NumberFormat('ru-RU').format(loan)}</div>
                    </div>
                    <div className="loanLimits">
                        <div>10 000 ₸</div>
@@ -67,7 +63,7 @@ const Calculator = () =>{
                            min={6}
                            max={60}
                            value={time}
-                           onChange={handleTimeChange}
+                           onChange={(event, value) => {setTime(value)}}
                        />
                        <div className="sliderValue">{`${YearOfLoan} ${MonthOfLoan}`}</div>
                    </div>

@@ -3,7 +3,7 @@ import Slider from "@mui/material/Slider";
 
 const StyledSlider = styled(Slider)`
     &&{
-      width: 631px;
+      //width: 631px;
       margin-right: 16px;
     }
   

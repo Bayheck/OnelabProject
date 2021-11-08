@@ -1,14 +1,18 @@
 import React,{useState} from 'react';
-import {MenuItem} from "@mui/material";
+import {MenuItem, SelectChangeEvent} from "@mui/material";
 import StyledSelect from "../styled/styledHeader/StyledSelect";
 
 const SelectLang = () =>{
-    const [select, setSelect] = useState("рус");
+    const [select, setSelect] = useState<string>("рус");
+
+    const handleChange = (event: SelectChangeEvent<unknown>) => {
+        setSelect(event.target.value as string);
+    };
 
     return(
         <StyledSelect
             value={select}
-            onChange = {() => {return (e:React.FormEvent<HTMLInputElement>) => {setSelect(e.currentTarget.value)}}}
+            onChange = {handleChange}
         >
             <MenuItem value={"kaz"}>Kaz</MenuItem>
             <MenuItem value={"eng"}>Eng</MenuItem>

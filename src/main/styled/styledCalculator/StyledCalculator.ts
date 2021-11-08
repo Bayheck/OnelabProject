@@ -34,6 +34,7 @@ const StyledCalculator = styled.div`
     font-size: 12px;
     color: #737373;
   }
+  
   & .header{
     background-color: white;
   }
