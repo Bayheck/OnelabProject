@@ -55,14 +55,23 @@ const StyledBanner = styled.div`
   .imgBlock {
     margin:46px 32px 18px 0;
   }
+  
+  .mobileButton{
+    display: none;
+  }
 
   @media screen and (max-width: 415px) {
     && {
       justify-content: space-between;
     }
+    
+    .content{
+      display: block;
+      padding: 32px 0 40px 0;
+    }
 
     img {
-      width: 138px;
+      width: 240px;
     }
 
     .bankName {
@@ -72,24 +81,35 @@ const StyledBanner = styled.div`
     .prize {
       font-size: 24px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .catch {
       font-size: 16px;
-      width: 150px;
+      text-align: center;
     }
 
     .detailsButton {
+      display: none;
+    }
+    
+    .mobileButton{
+      display: block;
+      border: none;
       background: #9D2550;
       color: #FFFFFF;
       padding: 15px 34px;
       line-height: 16px;
-      margin-top: 70px;
+      margin: 0 auto;
+      border-radius: 4px;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
     }
 
     .imgBlock {
       display: flex;
-      margin-right: 24px;
+      margin: 50px 0 32px 0;
       align-items: center;
     }
   }
@@ -103,8 +123,6 @@ const StyledBanner = styled.div`
       margin-top: 42px;
     }
   }
-  
-  
 `
 
 export default StyledBanner;

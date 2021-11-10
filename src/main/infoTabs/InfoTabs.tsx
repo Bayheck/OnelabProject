@@ -5,9 +5,9 @@ const InfoTabs = ()=>{
         <StyledInfoTabs>
             <div className="tab chosen">Условия</div>
             <div className="tab">Документы</div>
-            <div className="tab">Возможности</div>
-            <div className="tab">Важно</div>
-            <div className="tab">Типовые условия</div>
+            <div className="tab mobile">Возможности</div>
+            <div className="tab mobile">Важно</div>
+            <div className="tab mobile">Типовые условия</div>
         </StyledInfoTabs>
     )
 }

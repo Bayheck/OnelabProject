@@ -25,6 +25,17 @@ const StyledFrequentQuestions = styled.div`
     cursor: pointer;
     text-decoration-line: underline;
   }
+
+  @media screen and (max-width: 415px) {
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    
+    h3{
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+  }
 `
 
 export default StyledFrequentQuestions;

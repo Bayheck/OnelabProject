@@ -37,7 +37,11 @@ const StyledExpressCalculator = styled.div`
     line-height: 36px;
     color: #303030;
   }
-
+  
+  .errorMobileDisplay{
+    border: 1px solid #FF3A44;
+  }
+  
   & .loanLimits{
     display: flex;
     justify-content: space-between;
@@ -52,6 +56,7 @@ const StyledExpressCalculator = styled.div`
     justify-content: space-between;
     margin-top: 24px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
   }
 
   .timeButton{
@@ -171,6 +176,149 @@ const StyledExpressCalculator = styled.div`
     text-decoration-line: underline;
     color: cornflowerblue;
     cursor: pointer;
+  }
+  
+  .mobileOffer{
+    display: none;
+  }
+  
+  .mobileButtonLoan{
+    display: none;
+  }
+
+  form{
+    text-align: left;
+  }
+
+  @media screen and (max-width: 415px) {
+    padding: 0 14px;
+    box-sizing: border-box;
+    
+    .body{
+      padding: 26px 0 24px 0;
+    }
+    
+    h3{
+      text-align: left;
+    }
+
+    form{
+      text-align: center;
+    }
+    
+    form button{
+      margin: 0;
+    }
+    
+    .creditDetails{
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    
+    .mobileDisplay{
+      margin: 0 12px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: normal;
+      width: 180px;
+    }
+    
+    .slider{
+      display: none;
+    }
+    
+    .loanLimits{
+      justify-content: center;
+    }
+    
+    .time{
+      text-align: left;
+      width: 312px;
+      display: block;
+      margin: 16px auto 0 auto;
+    }
+    
+    .timeButton{
+      margin: 0 8px 8px 0;
+      display: inline-block;
+      background: #E0E0E0;
+      color: #1E2A41;
+    }
+    
+    .chosenButton{
+      color: white;
+      background: #9D2550;
+    }
+    
+    .calculation{
+      display: block;
+      color: #737373;
+    }
+    
+    .monthlyDisplay{
+      display: block;
+      text-align: center;
+      width: auto;
+    }
+    
+    .monthlyMoney{
+      margin: 4px 0 24px 0;
+    }
+
+    .mobileOffer{
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      width: 240px;
+      margin: 40px auto 0 auto;
+    }
+    
+    .mobileOfferDetails{
+      font-weight: normal;
+      margin-top: 14px;
+    }
+    
+    .miniContainer{
+      display: block;
+      max-width: 276px;
+      margin: 24px auto 0 auto;
+    }
+    
+    .contract{
+      max-width: 274px;
+      width: 100%;
+    }
+    
+    .additionalInfo{
+      display: none;
+    }
+    
+    .mobileLoan{
+      display: flex;
+      margin-top: 24px;
+    }
+    
+    .mobileButtonLoan{
+      display: block;
+      width: 48px;
+      height: 48px;
+      background: #9D2550;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .mobileDisplay{
+      width: 154px;
+    }
+    
+    .time{
+      width: 234px;
+    }
   }
 `
 

@@ -7,7 +7,6 @@ interface ButtonProps {
 
 const StyledButton = styled.button<ButtonProps>`
   background: ${(props) => props.pink ? 'rgba(157, 37, 80, 1)': '#1E2A41'};
-  display: block;
   margin-left: ${(props)=> props.pink? '24px':''};
   border-radius: 4px;
   color: #FFFFFF;

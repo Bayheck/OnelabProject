@@ -17,6 +17,7 @@ const StyledStonks= styled.div`
   .main{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   
   .block{
@@ -63,6 +64,42 @@ const StyledStonks= styled.div`
     color: cornflowerblue;
     cursor: pointer;
     text-decoration-line: underline;
+  }
+
+  @media screen and (max-width: 415px) {
+    &{
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+    
+    h2{
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    h3{
+      font-size: 18px;
+    }
+    
+    .block{
+      margin-top: 24px;
+    }
+    
+    .subheader{
+      font-size: 16px;
+    }
+    
+    .body{
+      font-size: 14px;
+    }
+    
+    .wrapper{
+      padding:0 24px 24px 24px;
+    }
+    
+    .header{
+      padding: 18px 24px;
+    }
   }
 `
 

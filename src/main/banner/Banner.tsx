@@ -22,6 +22,7 @@ const Banner = () =>{
                 <div className="imgBlock">
                     <img src={banner} alt="shopping"/>
                 </div>
+                <button className="mobileButton">Получить кредит</button>
             </div>
         </StyledBanner>
     )

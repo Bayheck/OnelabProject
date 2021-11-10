@@ -7,13 +7,18 @@ import StyledExpressCalculatorMiniInput from "../styled/styledExpressCalculator/
 import ExpressCalculatorInfoModal from "./ExpressCalculatorInfoModal";
 import ExpressCalculatorCreditModal from "./ExpressCalculatorCreditModal";
 import NumberFormat from 'react-number-format';
+import { ReactComponent as PlusIcon } from '../../assets/ExpressCalculator/first.svg';
+import { ReactComponent as MinusIcon } from '../../assets/ExpressCalculator/second.svg';
 
 const DEFAULT_LOAN = 7000000;
 const DEFAULT_TIME = 6;
+const INCREMENT_STEP = 10000;
+const MAX_LOAN = 7000000;
 const Months = [6, 12, 18, 24, 36, 48, 60];
 
 const ExpressCalculator = ()=>{
     const [loan, setLoan] = useState<number|number[]>(DEFAULT_LOAN);
+    const [validLoan, setValidLoan] = useState<boolean>(false);
     const [time, setTime] = useState<number>(DEFAULT_TIME);
     const [isClient, setIsClient] = useState<boolean>(false);
     const [showIndex, setShowIndex] = useState<boolean>(false);
@@ -26,7 +31,7 @@ const ExpressCalculator = ()=>{
 
     const percent:number = isClient ? 1.17 : 1.25;
     let monthlyPayment:number = 0;
-    if(typeof loan === "number" && typeof time ==="number") monthlyPayment = Math.ceil(loan*percent/time);
+    if(typeof loan === "number") monthlyPayment = Math.ceil(loan*percent/time);
 
     const validate = (input:string):void=>{
         if(input.length < 12){
@@ -54,13 +59,35 @@ const ExpressCalculator = ()=>{
         setIncome(input);
     }
 
+    const validateLoan = (input:string):void=>{
+        const loan = parseInt(input, 10);
+        if(loan <= MAX_LOAN){
+            setValidLoan(false);
+        }else {
+            setValidLoan(true);
+        }
+        setLoan(loan);
+    }
+
     return(
         <StyledExpressCalculator>
             <h3>Рассчитать Экспресс-кредит</h3>
             <div className="body">
                 <div className="creditDetails">
                     Сумма кредита
-                    <div className="mobileDisplay">{typeof loan === "number" && Intl.NumberFormat('ru-RU').format(loan)}₸</div>
+                    <div className="mobileLoan">
+                        <button onClick={():void =>{typeof loan === "number" && setLoan(loan - INCREMENT_STEP)}} className="mobileButtonLoan"><MinusIcon/></button>
+                        <NumberFormat
+                            error = {validNumber}
+                            variant="outlined"
+                            className={`mobileDisplay ${validLoan && 'errorMobileDisplay'}`}
+                            value = {`${loan}`}
+                            onValueChange={(event)=>{event.value !== '' ? validateLoan(event.value): setLoan(0)}}
+                            thousandSeparator={' '}
+                            suffix={'₸'}
+                        />
+                        <button onClick={():void =>{typeof loan === "number" && loan + INCREMENT_STEP <= MAX_LOAN && setLoan(loan + INCREMENT_STEP)}} className="mobileButtonLoan"><PlusIcon/></button>
+                    </div>
                 </div>
                 <div className="slider">
                     <StyledSlider
@@ -73,7 +100,7 @@ const ExpressCalculator = ()=>{
                     />
                 </div>
                 <div className="loanLimits">
-                    <div>100 000 ₸</div>
+                    <div>100 000 ₸ </div>
                     <div>7 000 000 ₸</div>
                 </div>
                 <div className="creditDetails">Срок кредита</div>
@@ -101,6 +128,10 @@ const ExpressCalculator = ()=>{
                             <div className="iReceive">Я получаю запрплату по карте ForteBank</div>
                         </div>
                     </div>
+                </div>
+                <div className="mobileOffer">
+                    Предварительный расчёт не является офертой
+                    <div className="mobileOfferDetails">Для уточнения подайте заявку</div>
                 </div>
                 <ExpressCalculatorInput index={index} isValid={isValid} showIndex={showIndex} setShowIndex={setShowIndex} validate={validate}/>
                 <form>

@@ -39,6 +39,20 @@ const StyledCitizenInfo = styled.div`
     line-height: 24px;
     color: #737373;
   }
+
+  @media screen and (max-width: 415px) {
+    padding: 0 16px;
+    box-sizing: border-box;
+    
+    h2{
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .mobile{
+      display: none;
+    }
+  }
 `
 
 export default StyledCitizenInfo;

@@ -30,6 +30,12 @@ const StyledAccordionExpress = styled(Accordion)`
     margin: 24px 0;
   }
 
+  @media screen and (max-width: 415px) {
+    p{
+      width: 250px;
+    }
+  }
+
 `
 
 export default StyledAccordionExpress;

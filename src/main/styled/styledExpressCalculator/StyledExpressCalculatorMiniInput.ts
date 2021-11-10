@@ -11,6 +11,14 @@ const StyledExpressCalculatorMiniInput = styled(TextField)`
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
+
+  @media screen and (max-width: 415px) {
+    &&{
+      max-width: 276px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
 `
 
 export default StyledExpressCalculatorMiniInput;

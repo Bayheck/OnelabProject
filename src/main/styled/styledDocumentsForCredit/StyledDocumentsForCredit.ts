@@ -16,7 +16,6 @@ const StyledDocumentsForCredit = styled.div`
   
   .info{
     margin-top: 26px;
-    width: 328px;
     font-size: 12px;
     line-height: 18px;
     color: #737373;
@@ -37,6 +36,18 @@ const StyledDocumentsForCredit = styled.div`
     align-items: center;
     justify-content: left;
     margin-top: 16px;
+  }
+
+  @media screen and (max-width: 415px) {
+    &{
+      padding: 0 16px 0 16px;
+      box-sizing: border-box;
+      margin-bottom: 40px;
+    }
+    
+    h3{
+      margin-bottom: 16px;
+    }
   }
 `
 
